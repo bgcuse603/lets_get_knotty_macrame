@@ -2,23 +2,17 @@
 
 ## Overview
 
-**Lets Get Knotty Macramé** is an inventory site for a small macramé businessy located in Manchester, New Hampshire. 
-
-### Goals
-
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
-
-<br>
+**Lets Get Knotty Macramé** is a full stack app designed as an inventory for a small macramé businessy located in Manchester, New Hampshire. 
 
 ## MVP
 
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
+_The **Lets Get Knotty Macramé** MVP will allow all users to explore product inventory_
 
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+### Goals
+
+- _User (NOT Signed In) will be able to view all products and post reviews on products_
+- _User (Signed In) will be able to create, update and delete product posts_
+- _User (Signed In) will be able to delete all reviews_
 
 ### Client (Front End)
 
@@ -38,39 +32,77 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
-
 [Component Tree](https://whimsical.com/lets-get-knotty-macrame-component-tree-5dqhYFuvkBdgp8ZSfrVT9o)
 
 #### Component Architecture
 
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
-
 ``` structure
 
 src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
+|__ screens/
+      |__ Homepage/
+            |__ Homepage.jsx
+            |__ Homepage.css
+      |__ SignIn/
+            |__ SignIn.jsx
+            |__ SignIn.css
+      |__ Products/
+            |__ Products.jsx
+            |__ Products.css
+      |__ ProductDetail/
+            |__ ProductDetail.jsx
+            |__ ProductDetail.css
+      |__ ProductUpdate.jsx
+            |__ ProductUpdate.jsx
+            |__ ProductUpdate.css
+      |__ About/
+            |__ About.jsx
+            |__ About.css
+      |__ Contact/
+            |__ Contact.jsx
+            |__ Contact.css
 |__ components/
-      |__ Header.jsx
+      |__ SignIn.jsx
+      |__ Footer.jsx
+      |__ Nav.jsx
+|__ containers/
+      |__ MainContainer/
+            |__ MainContainer.jsx
+|__ layout/
+      |__ layout.jsx
+      |__ layout.css
 |__ services/
-
+      |__ api-config.js
+      |__ auth.js
+      |__ products.js
+      |__ reviews.js
 ```
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
-
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
+| README & planning   |    H    |     8 hrs      |    TBD    |    TBD   |
+| Backend Auth    |    H     |     3 hrs      |     TBD    |    TBD   |
+| Backend Database   |    H     |     3 hrs      |     TBD    |    TBD    |
+| Seed & Create data   |    H     |     3 hrs      |     TBD    |    TBD    |
+| Test backend routes    |    H     |     3 hrs      |     TBD    |    TBD   |
+| Frontend Auth   |    H     |     3 hrs      |     2 hrs     |    TBD    |
+| Frontend routes & test |    H     |     3 hrs      |     TBD    |    TBD    |
+| Get, Edit, Delete products   |    H     |     3 hrs      |     TBD     |    TBD    |
+| Get, Delete reviews   |    H     |     3 hrs      |     TBD     |    TBD    |
+| Layout setup   |    H     |     3 hrs      |     TBD     |    TBD    |
+| Navigation |    H     |     3 hrs      |     TBD    |     TBD     |
+| Footer |    H     |     3 hrs      |     TBD     |    TBD    |
+| Home screen   |    H    |     3 hrs      |     TBD     |    TBD    |
+| Product screen |    H     |     3 hrs      |     TBD    |     TBD     |
+| Product detail screen |    H     |     3 hrs      |     TBD     |     TBD     |
+| Product update screen|    H     |     3 hrs      |     TBD     |     TBD     |
+| About screen |    H     |     3 hrs      |     TBD     |     TBD     |
+| Contact screen|    H     |     3 hrs      |     TBD     |     TBD     |
+| Sign In screen|    H     |     3 hrs      |     TBD     |     TBD     |
+| TOTAL               |          |    62  hrs      |     TBD     |     TBD     |
 
 <br>
 
@@ -78,34 +110,26 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
-
 [ERD](https://drive.google.com/file/d/1uMmwVYqFvKwwi_ilNblD7EoPEpIuJkaV/view?usp=sharing)
 
-<a href="https://imgur.com/X30C0SH"><img src="https://i.imgur.com/X30C0SH.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/sxR2mnI"><img src="https://i.imgur.com/sxR2mnI.jpg" title="source: imgur.com" /></a>
 <br>
 
 ***
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
+|     Library      | Description                                                      |
+| :--------------: | :--------------------------------------------------------------- |
+|      React       | _Front-end Javascript library_                                   |
+|   React Router   | _Standard library for routing components in React_               |
+|      Rails       | _Web-application framework that allows you to create a database_ |
 
-|     Library      | Description                                |
-| :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
-
-<br>
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
-
-***
+- _Add contact form that sends emails to owner_
+- _Form to add custom order and send to owner_
 
 ## Code Showcase
 
