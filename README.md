@@ -74,8 +74,7 @@ src
 |__ services/
       |__ api-config.js
       |__ auth.js
-      |__ products.js
-      |__ reviews.js
+
 ```
 
 #### Time Estimates
