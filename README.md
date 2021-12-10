@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Lets Get Knotty Macramé** is a full stack app designed as an inventory for a small macramé businessy located in Manchester, New Hampshire. 
+**Lets Get Knotty Macramé** is a full stack app designed as an inventory for a small macramé businessy located in Manchester, New Hampshire.
 
 ## MVP
 
@@ -36,7 +36,7 @@ _The **Lets Get Knotty Macramé** MVP will allow all users to explore product in
 
 #### Component Architecture
 
-``` structure
+```structure
 
 src
 |__ screens/
@@ -79,29 +79,28 @@ src
 
 #### Time Estimates
 
-
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| README & planning   |    H    |     8 hrs      |    TBD    |    TBD   |
-| Backend Auth    |    H     |     3 hrs      |     TBD    |    TBD   |
-| Backend Database   |    H     |     3 hrs      |     TBD    |    TBD    |
-| Seed & Create data   |    H     |     3 hrs      |     TBD    |    TBD    |
-| Test backend routes    |    H     |     3 hrs      |     TBD    |    TBD   |
-| Frontend Auth   |    H     |     3 hrs      |     2 hrs     |    TBD    |
-| Frontend routes & test |    H     |     3 hrs      |     TBD    |    TBD    |
-| Get, Edit, Delete products   |    H     |     3 hrs      |     TBD     |    TBD    |
-| Get, Delete reviews   |    H     |     3 hrs      |     TBD     |    TBD    |
-| Layout setup   |    H     |     3 hrs      |     TBD     |    TBD    |
-| Navigation |    H     |     3 hrs      |     TBD    |     TBD     |
-| Footer |    H     |     3 hrs      |     TBD     |    TBD    |
-| Home screen   |    H    |     3 hrs      |     TBD     |    TBD    |
-| Product screen |    H     |     3 hrs      |     TBD    |     TBD     |
-| Product detail screen |    H     |     3 hrs      |     TBD     |     TBD     |
-| Product update screen|    H     |     3 hrs      |     TBD     |     TBD     |
-| About screen |    H     |     3 hrs      |     TBD     |     TBD     |
-| Contact screen|    H     |     3 hrs      |     TBD     |     TBD     |
-| Sign In screen|    H     |     3 hrs      |     TBD     |     TBD     |
-| TOTAL               |          |    62  hrs      |     TBD     |     TBD     |
+| Task                       | Priority | Estimated Time | Time Invested | Actual Time |
+| -------------------------- | :------: | :------------: | :-----------: | :---------: |
+| README & planning          |    H     |     8 hrs      |      TBD      |     TBD     |
+| Backend Auth               |    H     |     3 hrs      |      TBD      |     TBD     |
+| Backend Database           |    H     |     3 hrs      |      TBD      |     TBD     |
+| Seed & Create data         |    H     |     3 hrs      |      TBD      |     TBD     |
+| Test backend routes        |    H     |     3 hrs      |      TBD      |     TBD     |
+| Frontend Auth              |    H     |     3 hrs      |     2 hrs     |     TBD     |
+| Frontend routes & test     |    H     |     3 hrs      |      TBD      |     TBD     |
+| Get, Edit, Delete products |    H     |     3 hrs      |      TBD      |     TBD     |
+| Get, Delete reviews        |    H     |     3 hrs      |      TBD      |     TBD     |
+| Layout setup               |    H     |     3 hrs      |      TBD      |     TBD     |
+| Navigation                 |    H     |     3 hrs      |      TBD      |     TBD     |
+| Footer                     |    H     |     3 hrs      |      TBD      |     TBD     |
+| Home screen                |    H     |     3 hrs      |      TBD      |     TBD     |
+| Product screen             |    H     |     3 hrs      |      TBD      |     TBD     |
+| Product detail screen      |    H     |     3 hrs      |      TBD      |     TBD     |
+| Product update screen      |    H     |     3 hrs      |      TBD      |     TBD     |
+| About screen               |    H     |     3 hrs      |      TBD      |     TBD     |
+| Contact screen             |    H     |     3 hrs      |      TBD      |     TBD     |
+| Sign In screen             |    H     |     3 hrs      |      TBD      |     TBD     |
+| TOTAL                      |          |     62 hrs     |      TBD      |     TBD     |
 
 <br>
 
@@ -114,16 +113,15 @@ src
 <a href="https://imgur.com/sxR2mnI"><img src="https://i.imgur.com/sxR2mnI.jpg" title="source: imgur.com" /></a>
 <br>
 
-***
+---
 
 ### Libraries and Dependencies
 
-|     Library      | Description                                                      |
-| :--------------: | :--------------------------------------------------------------- |
-|      React       | _Front-end Javascript library_                                   |
-|   React Router   | _Standard library for routing components in React_               |
-|      Rails       | _Web-application framework that allows you to create a database_ |
-
+|   Library    | Description                                                      |
+| :----------: | :--------------------------------------------------------------- |
+|    React     | _Front-end Javascript library_                                   |
+| React Router | _Standard library for routing components in React_               |
+|    Rails     | _Web-application framework that allows you to create a database_ |
 
 ## Post-MVP
 
@@ -137,3 +135,5 @@ src
 ## Code Issues & Resolutions
 
 > Use this section to list of all major issues encountered and their resolution.
+
+> for initial remote commit
