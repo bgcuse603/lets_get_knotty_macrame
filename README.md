@@ -110,9 +110,7 @@ src
 
 [ERD](https://drive.google.com/file/d/1uMmwVYqFvKwwi_ilNblD7EoPEpIuJkaV/view?usp=sharing)
 
-<a href="https://imgur.com/4Mj1C6t"><img src="https://i.imgur.com/4Mj1C6t.jpg" title="source: imgur.com" /></a>
-
----
+<a href="https://imgur.com/62hPG0N"><img src="https://i.imgur.com/62hPG0N.jpg" title="source: imgur.com" /></a>
 
 ### Libraries and Dependencies
 

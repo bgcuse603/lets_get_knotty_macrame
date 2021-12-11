@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   post '/auth/login', to: 'authentications#login'
   get '/auth/verify', to: 'authentications#verify'
-  resources :users
+  resources :users, only: :create
 
   resources :reviews
   resources :products

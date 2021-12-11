@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1
   def show
-    render json: @product
+    render json: @product, include: :reviews
   end
 
   # POST /products
@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
-      render json: @product, status: :created, location: @product
+      render json: @product, status: :created
     else
       render json: @product.errors, status: :unprocessable_entity
     end
