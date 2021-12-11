@@ -110,8 +110,7 @@ src
 
 [ERD](https://drive.google.com/file/d/1uMmwVYqFvKwwi_ilNblD7EoPEpIuJkaV/view?usp=sharing)
 
-<a href="https://imgur.com/sxR2mnI"><img src="https://i.imgur.com/sxR2mnI.jpg" title="source: imgur.com" /></a>
-<br>
+<a href="https://imgur.com/4Mj1C6t"><img src="https://i.imgur.com/4Mj1C6t.jpg" title="source: imgur.com" /></a>
 
 ---
 
@@ -135,5 +134,3 @@ src
 ## Code Issues & Resolutions
 
 > Use this section to list of all major issues encountered and their resolution.
-
-> for initial remote commit
