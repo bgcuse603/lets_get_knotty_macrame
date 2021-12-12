@@ -6,7 +6,7 @@ export default function Layout(props) {
       <header>
         <h1>Lets Get Knotty</h1>
         <h2>macramé</h2>
-        <Link>Sign In</Link>
+        <Link to='/signin'>Sign In</Link>
       </header>
       {props.children}
     </div>
