@@ -81,12 +81,12 @@ src
 
 | Task                       | Priority | Estimated Time | Time Invested | Actual Time |
 | -------------------------- | :------: | :------------: | :-----------: | :---------: |
-| README & planning          |    H     |     8 hrs      |      TBD      |     TBD     |
-| Backend Auth               |    H     |     3 hrs      |      TBD      |     TBD     |
-| Backend Database           |    H     |     3 hrs      |      TBD      |     TBD     |
-| Seed & Create data         |    H     |     3 hrs      |      TBD      |     TBD     |
-| Test backend routes        |    H     |     3 hrs      |      TBD      |     TBD     |
-| Frontend Auth              |    H     |     3 hrs      |     2 hrs     |     TBD     |
+| README & planning          |    H     |     3 hrs      |     8 hrs     |     TBD     |
+| Backend Auth               |    H     |     3 hrs      |     1 hr      |     TBD     |
+| Backend Database           |    H     |     3 hrs      |     1 hr      |     TBD     |
+| Seed & Create data         |    H     |     3 hrs      |     2 hrs     |     TBD     |
+| Test backend routes        |    H     |     3 hrs      |     2 hrs     |     TBD     |
+| Frontend Auth              |    H     |     3 hrs      |      hrs      |     TBD     |
 | Frontend routes & test     |    H     |     3 hrs      |      TBD      |     TBD     |
 | Get, Edit, Delete products |    H     |     3 hrs      |      TBD      |     TBD     |
 | Get, Delete reviews        |    H     |     3 hrs      |      TBD      |     TBD     |
