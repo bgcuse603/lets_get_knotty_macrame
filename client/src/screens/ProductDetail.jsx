@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProduct } from '../services/products';
 
-export default function ProductDetail({ products }) {
+export default function ProductDetail() {
   const [product, setProduct] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
-  const [reviews, setReviews] = useState([]);
+  const [reviews, setReviews] = useState(null);
   const { id }= useParams();
   
 
@@ -13,15 +13,15 @@ export default function ProductDetail({ products }) {
     const fetchProduct = async () => {
       const productData = await getProduct(id);
       setProduct(productData);
+      setReviews(productData.reviews);
       setLoaded(true);
     }
     fetchProduct(id);
-    setReviews(product.reviews);
   }, [id])
 
   if (!isLoaded) {
     return <h1>Loading...</h1>
-  }
+  } 
   
   return (
     <div>

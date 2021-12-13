@@ -24,7 +24,7 @@ export default function MainContainer() {
           <Products products={products}/>
         </Route>
         <Route path='/products/:id'>
-          <ProductDetail products={products}/>
+          <ProductDetail />
         </Route>
       </Switch>
     </div>
