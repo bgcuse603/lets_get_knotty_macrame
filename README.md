@@ -39,41 +39,34 @@ _The **Lets Get Knotty Macramé** MVP will allow all users to explore product in
 ```structure
 
 src
-|__ screens/
-      |__ Homepage/
-            |__ Homepage.jsx
-            |__ Homepage.css
-      |__ SignIn/
-            |__ SignIn.jsx
-            |__ SignIn.css
-      |__ Products/
-            |__ Products.jsx
-            |__ Products.css
-      |__ ProductDetail/
-            |__ ProductDetail.jsx
-            |__ ProductDetail.css
-      |__ ProductUpdate.jsx
-            |__ ProductUpdate.jsx
-            |__ ProductUpdate.css
-      |__ About/
-            |__ About.jsx
-            |__ About.css
-      |__ Contact/
-            |__ Contact.jsx
-            |__ Contact.css
+|__ assets/
+      |__ css
+      |__ fonts
+      |__ images
 |__ components/
-      |__ SignIn.jsx
       |__ Footer.jsx
       |__ Nav.jsx
 |__ containers/
-      |__ MainContainer/
-            |__ MainContainer.jsx
+      __ MainContainer.jsx
 |__ layout/
       |__ layout.jsx
-      |__ layout.css
+|__ screens/
+      |__ About.jsx
+      |__ Contact.jsx
+      |__ Home.jsx
+      |__ ProductDetail.jsx
+      |__ Products.jsx
+      |__ ProductUpdate.jsx
+      |__ Register.jsx
+      |__ SignIn.jsx
 |__ services/
-      |__ api-config.js
+      |__ apiConfig.js
       |__ auth.js
+      |__ products.js
+|__ App.css
+|__ App.js
+|__ index.js
+
 
 ```
 
@@ -86,8 +79,8 @@ src
 | Backend Database           |    H     |     3 hrs      |     1 hr      |     TBD     |
 | Seed & Create data         |    H     |     3 hrs      |     2 hrs     |     TBD     |
 | Test backend routes        |    H     |     3 hrs      |     2 hrs     |     TBD     |
-| Frontend Auth              |    H     |     3 hrs      |      hrs      |     TBD     |
-| Frontend routes & test     |    H     |     3 hrs      |      TBD      |     TBD     |
+| Frontend Auth              |    H     |     3 hrs      |     1 hr      |     TBD     |
+| Frontend routes & test     |    H     |     3 hrs      |     3 hrs     |     TBD     |
 | Get, Edit, Delete products |    H     |     3 hrs      |      TBD      |     TBD     |
 | Get, Delete reviews        |    H     |     3 hrs      |      TBD      |     TBD     |
 | Layout setup               |    H     |     3 hrs      |      TBD      |     TBD     |
