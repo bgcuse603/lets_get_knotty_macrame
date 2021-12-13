@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
+import Products from '../screens/Products';
 import { getAllProducts } from '../services/products';
 
 export default function MainContainer() {
@@ -19,8 +20,8 @@ export default function MainContainer() {
       <h1>Main Container</h1>
       <Switch>
         <Route path='/products'>
-            <h1>products</h1>
-          </Route>
+          <Products products={products}/>
+        </Route>
       </Switch>
     </div>
   )
