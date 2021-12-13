@@ -1,14 +1,23 @@
 import { Link } from 'react-router-dom';
 
-export default function Layout(props) {
+export default function Layout({ currentUser, handleLogout, children }) {
+  
   return (
     <div>
       <header>
         <h1>Lets Get Knotty</h1>
         <h2>macramé</h2>
-        <Link to='/signin'>Sign In</Link>
+        { currentUser ? (
+            <div>
+              <p>Hi, {`${currentUser.username}`}</p>
+              <button onClick={handleLogout}>Logout</button>
+            </div>
+          ) : (
+            <Link to='/signin'>Sign In</Link>
+        )}
+        
       </header>
-      {props.children}
+      {children}
     </div>
   )
 }
