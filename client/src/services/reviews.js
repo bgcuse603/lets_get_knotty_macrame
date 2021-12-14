@@ -6,7 +6,7 @@ export const getAllReviews = async (id) => {
 }
 
 export const postReview = async (id, reviewData) => {
-  const resp = await api.post(`/products/${id}/reviews`, { reviews: reviewData});
+  const resp = await api.post(`/products/${id}/reviews`, { review: reviewData});
   return resp.data;
 }
 

@@ -1,6 +1,7 @@
 // Packages 
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
+
 // Screens
 import Products from '../screens/Products';
 import ProductDetail from '../screens/ProductDetail';

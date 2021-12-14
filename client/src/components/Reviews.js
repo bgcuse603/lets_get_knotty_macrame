@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
+
 // Services
-import { getAllReviews} from '../services/reviews';
+import { getAllReviews, postReview} from '../services/reviews';
 
 export default function Reviews() {
+  const history = useHistory();
   const [reviews, setReviews] = useState({
     name: '',
     comment: '',
@@ -12,12 +14,12 @@ export default function Reviews() {
   const [toggleFetch, setToggleFetch] = useState(false);
   const { id } = useParams();
 
-  // const [formData, setFormData] = useState({
-  //   name: '',
-  //   comment: '',
-  //   product_id: '',
-  // });
-  // const { name, comment } = formData;
+  const [formData, setFormData] = useState({
+    name: '',
+    comment: '',
+    product_id: '',
+  });
+  const { name, comment } = formData;
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -27,40 +29,29 @@ export default function Reviews() {
     }
     fetchReviews(id);
   }, [])
-  console.log(reviews);
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setFormData(prevState => ({
-  //     ...prevState,
-  //     [name]: value
-  //   }))
-  // }
 
-  // const handleReviewCreate = async (formData) => {
-  //   const newReview = await postReview(formData);
-  //   setReviews(prevState => [...prevState, newReview]);
-  // }
+  console.log(reviews);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }))
+  }
+
+  const handleReviewCreate = async (id, formData) => {
+    const newReview = await postReview(id, formData);
+    setReviews(prevState => [...prevState, newReview]);
+    history.push(`/products/${id}`);
+  }
 
   return (
     <div>
-      <h1>test</h1>
-      <div>
-        {toggleFetch ?
-          <div>
-            {reviews.map((review, index) => (
-            <div className='reviewBox' key={index}>
-              <h4>{`${review.name}`}</h4>
-              <p>{`${review.comment}`}</p>
-              <br />
-            </div>
-          ))}
-          </div> : `${id}`}
-      </div>
-
-      {/* <form
+      <form
         onSubmit={(e) => {
           e.preventDefault();
-          // handleReviewCreate(formData);
+          handleReviewCreate(id, formData);
         }}>
       <label>
         Name:
@@ -81,8 +72,19 @@ export default function Reviews() {
         />
         </label><br />
         <button>Submit</button>
-      </form> */}
- 
+      </form>
+      <div>
+        {toggleFetch ?
+          <div>
+            {reviews.map((review, index) => (
+            <div className='reviewBox' key={index}>
+              <h4>{`${review.name}`}</h4>
+              <p>{`${review.comment}`}</p>
+              <br />
+            </div>
+          ))}
+          </div> : `${id}`}
+      </div>
     </div>
   )
 }
