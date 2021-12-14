@@ -47,13 +47,6 @@ export default function ProductDetail({handleProductDelete}) {
       <div className="reviews">
         <h3>reviews</h3>
         <Reviews />
-        {/* {reviews.map((review, index) => (
-        <div className='reviewBox' key={index}>
-          <h4>{`${review.name}`}</h4>
-          <p>{`${review.comment}`}</p>
-          <br />
-        </div>
-      ))} */}
       </div>
     </div>
   )

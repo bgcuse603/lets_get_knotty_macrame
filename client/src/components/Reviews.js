@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams, useHistory } from 'react-router-dom';
 
 // Services
-import { getAllReviews, postReview} from '../services/reviews';
+import { getAllReviews, postReview, deleteReview} from '../services/reviews';
 
 export default function Reviews() {
   const history = useHistory();
@@ -13,6 +13,7 @@ export default function Reviews() {
   });
   const [toggleFetch, setToggleFetch] = useState(false);
   const { id } = useParams();
+  
 
   const [formData, setFormData] = useState({
     name: '',
@@ -43,7 +44,15 @@ export default function Reviews() {
   const handleReviewCreate = async (id, formData) => {
     const newReview = await postReview(id, formData);
     setReviews(prevState => [...prevState, newReview]);
-    history.push(`/products/${id}`);
+    setToggleFetch(!toggleFetch);
+  }
+
+  const handleReviewDelete = async (review) => {
+    let reviewId = review.id;
+    let productId = review.product_id;
+    await deleteReview(productId, reviewId);
+    setReviews(prevState => prevState.filter(review => review.id !== reviewId));
+    setToggleFetch(!toggleFetch);
   }
 
   return (
@@ -71,19 +80,20 @@ export default function Reviews() {
           onChange={handleChange}
         />
         </label><br />
-        <button>Submit</button>
+        <button>Submit</button><br/>
       </form>
       <div>
         {toggleFetch ?
           <div>
             {reviews.map((review, index) => (
-            <div className='reviewBox' key={index}>
+              <div className='reviewBox' key={index}>
               <h4>{`${review.name}`}</h4>
               <p>{`${review.comment}`}</p>
+              <button onClick={() => handleReviewDelete(review)}>DESTROY</button>
               <br />
             </div>
           ))}
-          </div> : `${id}`}
+          </div> : '...loading reviews...'}
       </div>
     </div>
   )
