@@ -1,10 +1,9 @@
 import axios from 'axios';
 
-// development link
-const baseUrl = 'http://localhost:3000';
+const baseUrl = process.env.NODE_ENV === 'production' ? 'https://macrame-api.herokuapp.com/' : 'http://localhost:3000' 
 
 const api = axios.create({
-  baseURL: baseUrl,
-});
+  baseURL: baseUrl
+})
 
 export default api;
