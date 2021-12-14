@@ -7,7 +7,7 @@ import ProductDetail from '../screens/ProductDetail';
 import ProductUpdate from '../screens/ProductUpdate';
 import ProductCreate from '../screens/ProductCreate';
 // Services
-import { getAllProducts, postProduct, deleteProduct } from '../services/products';
+import { getAllProducts, postProduct, putProduct, deleteProduct } from '../services/products';
 
 export default function MainContainer() {
   const [products, setProducts] = useState([]);
@@ -33,11 +33,11 @@ export default function MainContainer() {
     history.push('/products');
   }
 
-  // const handleProductUpdate = async (formData) => {
-  //   const updatedProduct = await postProduct(formData);
-  //   setProducts(prevState => [...prevState, newProduct]);
-  //   history.push('/products');
-  // }
+  const handleProductUpdate = async (formData, id) => {
+    const updatedProduct = await putProduct(formData, id);
+    setProducts(prevState => [...prevState, updatedProduct]);
+    history.push(`/products/${id}`);
+  }
 
   return (
     <div>
@@ -47,7 +47,8 @@ export default function MainContainer() {
           <ProductCreate handleProductCreate={handleProductCreate}/>
         </Route>
         <Route path='/products/:id/update'>
-          <ProductUpdate products={ products }/>
+          <ProductUpdate
+            handleProductUpdate={handleProductUpdate}/>
         </Route>
         <Route path='/products/:id'>
           <ProductDetail

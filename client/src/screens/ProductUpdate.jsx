@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 // Services
 import { getOneProduct } from '../services/products';
 
-export default function ProductUpdate({ products, handleProductUpdate }) {
+export default function ProductUpdate({ handleProductUpdate }) {
   const [isLoaded, setLoaded] = useState(false);
   const [formData, setFormData] = useState({
     item: '',
@@ -14,20 +14,6 @@ export default function ProductUpdate({ products, handleProductUpdate }) {
   });
   const { item, price, description, img, hanger } = formData;
   const { id } = useParams();
-
-  // useEffect(() => {
-  //   const prefillFormData = (id) => {
-  //     const productItem = getOneProduct(id);
-  //     setFormData({
-  //       item:  productItem.item,
-  //       price: productItem.price,
-  //       description: productItem.description,
-  //       img: productItem.img,
-  //       hanger: productItem.hanger,
-  //     });
-  //   }
-  //   prefillFormData();
-  // }, [id]);
 
   useEffect(() => {
     const prefillFormData = async () => {
@@ -47,6 +33,7 @@ export default function ProductUpdate({ products, handleProductUpdate }) {
   if (!isLoaded) {
     return <h1>Loading...</h1>
   } 
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
@@ -59,7 +46,7 @@ export default function ProductUpdate({ products, handleProductUpdate }) {
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        handleProductUpdate(formData);
+        handleProductUpdate(formData, id);
       }}
     >
       <h2>Product Update</h2>
