@@ -41,7 +41,6 @@ export default function MainContainer() {
 
   return (
     <div>
-      <h1>Main Container</h1>
       <Switch>
       <Route path='/newproduct'>
           <ProductCreate handleProductCreate={handleProductCreate}/>

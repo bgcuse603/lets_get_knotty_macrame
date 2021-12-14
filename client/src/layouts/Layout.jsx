@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Nav from '../components/Nav';
 
 export default function Layout({ currentUser, handleLogout, children }) {
   
@@ -20,7 +21,11 @@ export default function Layout({ currentUser, handleLogout, children }) {
         )}
         
       </header>
+      <section>
+        <Nav />
+      </section>
       {children}
+
     </div>
   )
 }
