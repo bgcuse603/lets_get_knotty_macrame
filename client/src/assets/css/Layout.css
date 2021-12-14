@@ -1,8 +1,10 @@
 h1 {
   font-size: 30px;
+  margin: 0;
 }
 h2 {
   font-size: 20px;
+  margin: 0;
 }
 
 .zeyada {
@@ -28,4 +30,7 @@ header {
   flex-direction: row;
   align-items: baseline;
   color: #f9d8b7;
+}
+.subHeader {
+  margin: 0;
 }

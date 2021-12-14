@@ -28,7 +28,7 @@ export default function Layout({ currentUser, handleLogout, children }) {
           )}
         </div>
         <div className='subheader'>
-          {location.pathname === "/" ? (<img src='https://i.imgur.com/VyBhgBU.jpg' height='500' />) : (<img src=''/>)}
+          {location.pathname === "/" ? (<img src='https://i.imgur.com/VyBhgBU.jpg' height='500' />) : (<div/>)}
         </div>
       </header>
       <section>
