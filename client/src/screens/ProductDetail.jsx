@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { getProduct } from '../services/products';
+
 
 export default function ProductDetail() {
   const [product, setProduct] = useState(null);
@@ -23,6 +24,7 @@ export default function ProductDetail() {
     return <h1>Loading...</h1>
   } 
   
+
   return (
     <div>
       
@@ -37,6 +39,14 @@ export default function ProductDetail() {
           <h4>{`${product.item}`}</h4>
           <h6>{`${product.price}`}</h6>
           <p>{`${product.description}`}</p>
+          <div className="twoButtons">
+            <button>
+              <Link className="updateLink" to={`/products/${id}/update`}>
+                UPDATE
+              </Link>
+            </button>
+            <button>DESTROY</button>
+          </div>
         </div>
       </div>
       <div className="reviews">
