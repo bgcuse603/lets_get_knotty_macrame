@@ -5,6 +5,13 @@ export default function Products({ products }) {
 
   return (
     <div>
+      <div>
+        <h3>PRODUCTS</h3>
+        <Link to={`/newproduct`}>
+          <button>CREATE NEW</button>
+        </Link>
+      </div>
+      <div>
       {products.map((product, index) => (
         <Link to={`/products/${product.id}`} key = {index}>
             <div className="productDiv" >
@@ -13,6 +20,7 @@ export default function Products({ products }) {
           </div>
         </Link>
       ))}
+      </div>
     </div>
   )
 }

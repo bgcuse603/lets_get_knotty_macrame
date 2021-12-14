@@ -40,11 +40,9 @@ export default function ProductDetail() {
           <h6>{`${product.price}`}</h6>
           <p>{`${product.description}`}</p>
           <div className="twoButtons">
-            <button>
-              <Link className="updateLink" to={`/products/${id}/update`}>
-                UPDATE
-              </Link>
-            </button>
+            <Link to={`/products/${id}/update`}>
+              <button>UPDATE</button>
+            </Link>
             <button>DESTROY</button>
           </div>
         </div>

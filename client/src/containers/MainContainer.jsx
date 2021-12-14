@@ -26,6 +26,9 @@ export default function MainContainer() {
         <Route path='/products/:id'>
           <ProductDetail />
         </Route>
+        <Route path='/newproduct'>
+          <h1>create new</h1>
+        </Route>
         <Route exact path='/products'>
           <Products products={products}/>
         </Route>
