@@ -1,9 +1,20 @@
 import { Link, useLocation } from 'react-router-dom';
 import Nav from '../components/Nav';
 import '../assets/css/Layout.css';
+import LGKlogo from '../assets/images/LGKlogo.jpeg';
+
 
 export default function Layout({ currentUser, handleLogout, children }) {
   const location = useLocation();
+
+  const contentLinkStyle = {
+    color: "#F9D8B7",
+    textDecoration: "none",
+    fontFamily: "Zeyada",
+    fontSize: "25px",
+    fontWeight: "bold",
+    margin: "5px",
+  };
   
   return (
     <div>
@@ -16,19 +27,19 @@ export default function Layout({ currentUser, handleLogout, children }) {
               <h2 className='raleway'>MACRAMÉ</h2>
               </div>)}
           { currentUser ? (
-            <div>
-              <p>Hi, {`${currentUser.username}`}</p>
+            <div className='signInToggle'>
+              <h1>Hi, {`${currentUser.username}`}</h1>
               <button onClick={handleLogout}>Logout</button>
               {/* <Link to='/register'>
                 <button>Register New User</button>
               </Link> */}
             </div>
             ) : (
-              <Link to='/signin'>Sign In</Link>
+              <Link to='/signin' style={contentLinkStyle}>Sign In</Link>
           )}
         </div>
         <div className='subheader'>
-          {location.pathname === "/" ? (<img src='https://i.imgur.com/VyBhgBU.jpg' height='500' />) : (<div/>)}
+          {location.pathname === "/" ? (<img src={LGKlogo} height='300' />) : (<div/>)}
         </div>
       </header>
       <section>
