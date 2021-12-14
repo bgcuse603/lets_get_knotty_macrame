@@ -19,7 +19,6 @@ export default function Layout({ currentUser, handleLogout, children }) {
           ) : (
             <Link to='/signin'>Sign In</Link>
         )}
-        
       </header>
       <section>
         <Nav />
