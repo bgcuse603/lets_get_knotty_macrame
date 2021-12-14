@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
+import '../assets/css/Nav.css';
 
-export default function Nav() {
+export default function Nav({headerLinkStyle}) {
   return (
     <div className='nav'>
-      <Link to='/'>Home</Link>
-      <Link to='/about'>About</Link>
-      <Link to='/products'>Products</Link>
-      <Link to='/contact'>Contact</Link>
+      <Link to='/' style={headerLinkStyle}>Home</Link>
+      <Link to='/about'style={headerLinkStyle}>About</Link>
+      <Link to='/products'style={headerLinkStyle}>Products</Link>
+      <Link to='/contact'style={headerLinkStyle}>Contact</Link>
     </div>
   )
 }

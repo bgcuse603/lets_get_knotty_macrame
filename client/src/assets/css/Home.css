@@ -1,6 +1,13 @@
-body {
-  background-color: #fdfcf7;
+.homeDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: baseline;
+  padding-top: 5vh;
 }
 
-h1 {
+.homeIconBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }

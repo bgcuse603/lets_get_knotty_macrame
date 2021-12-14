@@ -7,12 +7,11 @@ import LGKlogo from '../assets/images/LGKlogo.jpeg';
 export default function Layout({ currentUser, handleLogout, children }) {
   const location = useLocation();
 
-  const contentLinkStyle = {
+  const headerLinkStyle = {
     color: "#F9D8B7",
     textDecoration: "none",
     fontFamily: "Zeyada",
-    fontSize: "25px",
-    fontWeight: "bold",
+    fontSize: "30px",
     margin: "5px",
   };
   
@@ -35,7 +34,7 @@ export default function Layout({ currentUser, handleLogout, children }) {
               </Link> */}
             </div>
             ) : (
-              <Link to='/signin' style={contentLinkStyle}>Sign In</Link>
+              <Link to='/signin' style={headerLinkStyle}>Sign In</Link>
           )}
         </div>
         <div className='subheader'>
@@ -43,7 +42,7 @@ export default function Layout({ currentUser, handleLogout, children }) {
         </div>
       </header>
       <section>
-        <Nav />
+        <Nav headerLinkStyle={headerLinkStyle}/>
       </section>
       {children}
 
