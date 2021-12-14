@@ -8,7 +8,8 @@ export default function Reviews() {
     name: '',
     comment: '',
     product_id: '',
-});
+  });
+  const [toggleFetch, setToggleFetch] = useState(false);
   const { id } = useParams();
 
   // const [formData, setFormData] = useState({
@@ -22,6 +23,7 @@ export default function Reviews() {
     const fetchReviews = async () => {
       const reviewsList = await getAllReviews(id);
       setReviews(reviewsList);
+      setToggleFetch(!toggleFetch);
     }
     fetchReviews(id);
   }, [])
@@ -43,13 +45,16 @@ export default function Reviews() {
     <div>
       <h1>test</h1>
       <div>
-        {/* {reviews.map((review, index) => (
-          <div className='reviewBox' key={index}>
-            <h4>{`${review.name}`}</h4>
-            <p>{`${review.comment}`}</p>
-            <br />
-        </div>
-        ))} */}
+        {toggleFetch ?
+          <div>
+            {reviews.map((review, index) => (
+            <div className='reviewBox' key={index}>
+              <h4>{`${review.name}`}</h4>
+              <p>{`${review.comment}`}</p>
+              <br />
+            </div>
+          ))}
+          </div> : `${id}`}
       </div>
 
       {/* <form
