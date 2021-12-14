@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { getProduct } from '../services/products';
 
 
-export default function ProductDetail() {
+export default function ProductDetail({handleProductDelete}) {
   const [product, setProduct] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const [reviews, setReviews] = useState(null);
@@ -43,7 +43,7 @@ export default function ProductDetail() {
             <Link to={`/products/${id}/update`}>
               <button>UPDATE</button>
             </Link>
-            <button>DESTROY</button>
+            <button onClick={() => handleProductDelete(id)}>DESTROY</button>
           </div>
         </div>
       </div>

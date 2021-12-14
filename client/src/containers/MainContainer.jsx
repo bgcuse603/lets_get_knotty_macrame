@@ -1,10 +1,13 @@
+// Packages 
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
+// Screens
 import Products from '../screens/Products';
 import ProductDetail from '../screens/ProductDetail';
 import ProductUpdate from '../screens/ProductUpdate';
 import ProductCreate from '../screens/ProductCreate';
-import { getAllProducts, postProduct } from '../services/products';
+// Services
+import { getAllProducts, postProduct, deleteProduct } from '../services/products';
 
 export default function MainContainer() {
   const [products, setProducts] = useState([]);
@@ -24,6 +27,12 @@ export default function MainContainer() {
     history.push('/products');
   }
 
+  const handleProductDelete = async (id) => {
+    await deleteProduct(id);
+    setProducts(prevState => prevState.filter(product => product.id != id));
+    history.push('/products');
+  }
+
   return (
     <div>
       <h1>Main Container</h1>
@@ -35,7 +44,8 @@ export default function MainContainer() {
           <ProductUpdate />
         </Route>
         <Route path='/products/:id'>
-          <ProductDetail />
+          <ProductDetail
+            handleProductDelete={handleProductDelete} />
         </Route>
         <Route exact path='/products'>
           <Products products={products}/>

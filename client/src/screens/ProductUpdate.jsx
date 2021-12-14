@@ -1,31 +1,82 @@
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { getProduct } from '../services/products';
+import { useState } from 'react';
 
-export default function ProductUpdate() {
-  const [product, setProduct] = useState(null);
-  const [isLoaded, setLoaded] = useState(false);
-  const { id } = useParams();
+export default function ProductUpdate({handleProductUpdate}) {
+  const [formData, setFormData] = useState({
+    item: '',
+    price: 0,
+    description: '',
+    img: '',
+    hanger: '',
+  });
 
-  useEffect(() => {
-    const fetchProduct = async () => {
-      const productData = await getProduct(id);
-      setProduct(productData);
-      setLoaded(true);
-    }
-    fetchProduct(id);
-  }, [id])
+  const { item, price, description, img, hanger } = formData;
 
-  if (!isLoaded) {
-    return <h1>Loading...</h1>
-  } 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }))
+  }
+
   
-  
-  
+
   return (
-    <div>
-      <h3>productupdate</h3>
-      <img src={`${product.img}`} alt="macrame" width="500" height="600"></img>
-    </div>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleProductUpdate(formData);
+      }}
+    >
+      <h2>Create New</h2>
+      <label>
+        Item:
+        <input
+          type='text'
+          name='item'
+          value={item}
+          onChange={handleChange}
+        />
+      </label><br/>
+      <label>
+        Price:
+        <input
+          type='integer'
+          name='price'
+          value={price}
+          onChange={handleChange}
+        />
+      </label><br/>
+      <label>
+        Description:
+        <input
+          type='text'
+          name='description'
+          value={description}
+          onChange={handleChange}
+        />
+      </label><br />
+      <label>
+        Image URL:
+        <input
+          type='text'
+          name='img'
+          value={img}
+          onChange={handleChange}
+        />
+      </label><br />
+      <label>
+        Category: 
+        <input
+          type='text'
+          name='hanger'
+          value={hanger}
+          onChange={handleChange}
+        />
+      </label><br/>
+
+      <button>Submit</button>
+    </form>
   )
 }
+
