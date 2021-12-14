@@ -41,6 +41,12 @@ function App() {
     <div className="App">
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
+        <Route path='/contact'>
+            <h1>CONTACT</h1>
+          </Route>
+          <Route path='/about'>
+            <h1>ABOUT</h1>
+          </Route>
           <Route path='/home'>
             <h1>HOME</h1>
           </Route>
