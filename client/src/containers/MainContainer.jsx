@@ -29,9 +29,15 @@ export default function MainContainer() {
 
   const handleProductDelete = async (id) => {
     await deleteProduct(id);
-    setProducts(prevState => prevState.filter(product => product.id != id));
+    setProducts(prevState => prevState.filter(product => product.id !== id));
     history.push('/products');
   }
+
+  // const handleProductUpdate = async (formData) => {
+  //   const updatedProduct = await postProduct(formData);
+  //   setProducts(prevState => [...prevState, newProduct]);
+  //   history.push('/products');
+  // }
 
   return (
     <div>
@@ -41,7 +47,7 @@ export default function MainContainer() {
           <ProductCreate handleProductCreate={handleProductCreate}/>
         </Route>
         <Route path='/products/:id/update'>
-          <ProductUpdate />
+          <ProductUpdate products={ products }/>
         </Route>
         <Route path='/products/:id'>
           <ProductDetail

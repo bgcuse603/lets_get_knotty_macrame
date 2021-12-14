@@ -1,6 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+// Services
+import { getOneProduct } from '../services/products';
 
-export default function ProductUpdate({handleProductUpdate}) {
+export default function ProductUpdate({ products, handleProductUpdate }) {
+  const [isLoaded, setLoaded] = useState(false);
   const [formData, setFormData] = useState({
     item: '',
     price: 0,
@@ -8,9 +12,41 @@ export default function ProductUpdate({handleProductUpdate}) {
     img: '',
     hanger: '',
   });
-
   const { item, price, description, img, hanger } = formData;
+  const { id } = useParams();
 
+  // useEffect(() => {
+  //   const prefillFormData = (id) => {
+  //     const productItem = getOneProduct(id);
+  //     setFormData({
+  //       item:  productItem.item,
+  //       price: productItem.price,
+  //       description: productItem.description,
+  //       img: productItem.img,
+  //       hanger: productItem.hanger,
+  //     });
+  //   }
+  //   prefillFormData();
+  // }, [id]);
+
+  useEffect(() => {
+    const prefillFormData = async () => {
+      const productItem = await getOneProduct(id);
+      setFormData({
+        item:  productItem.item,
+        price: productItem.price,
+        description: productItem.description,
+        img: productItem.img,
+        hanger: productItem.hanger,
+      });
+      setLoaded(true);
+    }
+    prefillFormData(id);
+  }, [id])
+
+  if (!isLoaded) {
+    return <h1>Loading...</h1>
+  } 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
@@ -19,8 +55,6 @@ export default function ProductUpdate({handleProductUpdate}) {
     }))
   }
 
-  
-
   return (
     <form
       onSubmit={(e) => {
@@ -28,7 +62,7 @@ export default function ProductUpdate({handleProductUpdate}) {
         handleProductUpdate(formData);
       }}
     >
-      <h2>Create New</h2>
+      <h2>Product Update</h2>
       <label>
         Item:
         <input
@@ -79,4 +113,3 @@ export default function ProductUpdate({handleProductUpdate}) {
     </form>
   )
 }
-

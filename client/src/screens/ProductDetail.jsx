@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { getProduct } from '../services/products';
+import { getOneProduct } from '../services/products';
 
 
 export default function ProductDetail({handleProductDelete}) {
@@ -12,7 +12,7 @@ export default function ProductDetail({handleProductDelete}) {
 
   useEffect(() => {
     const fetchProduct = async () => {
-      const productData = await getProduct(id);
+      const productData = await getOneProduct(id);
       setProduct(productData);
       setReviews(productData.reviews);
       setLoaded(true);
