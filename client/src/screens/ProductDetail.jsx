@@ -1,5 +1,7 @@
+// Packages 
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
+// Packages 
 import { getOneProduct } from '../services/products';
 
 
@@ -23,14 +25,9 @@ export default function ProductDetail({handleProductDelete}) {
   if (!isLoaded) {
     return <h1>Loading...</h1>
   } 
-  
 
   return (
     <div>
-      
-      <h1>{`${id}`}</h1>
-      
-
       <div className="productDetail">
         <div className="imgBox">
           <img src={`${product.img}`} alt="macrame" width="500" height="600"></img>
@@ -53,7 +50,7 @@ export default function ProductDetail({handleProductDelete}) {
         <div className='reviewBox' key={index}>
           <h4>{`${review.name}`}</h4>
           <p>{`${review.comment}`}</p>
-          <br/>
+          <br />
         </div>
       ))}
       </div>
