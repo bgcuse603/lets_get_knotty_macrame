@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react'
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams} from 'react-router-dom';
 
 // Services
 import { getAllReviews, postReview, deleteReview} from '../services/reviews';
 
 export default function Reviews() {
-  const history = useHistory();
   const [reviews, setReviews] = useState({
     name: '',
     comment: '',
@@ -44,7 +43,7 @@ export default function Reviews() {
   const handleReviewCreate = async (id, formData) => {
     const newReview = await postReview(id, formData);
     setReviews(prevState => [...prevState, newReview]);
-    setToggleFetch(!toggleFetch);
+    // setToggleFetch(!toggleFetch);
   }
 
   const handleReviewDelete = async (review) => {
@@ -52,7 +51,7 @@ export default function Reviews() {
     let productId = review.product_id;
     await deleteReview(productId, reviewId);
     setReviews(prevState => prevState.filter(review => review.id !== reviewId));
-    setToggleFetch(!toggleFetch);
+    // setToggleFetch(!toggleFetch);
   }
 
   return (
