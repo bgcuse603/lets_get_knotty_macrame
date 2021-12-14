@@ -1,0 +1,31 @@
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 20px;
+}
+
+.zeyada {
+  font-family: "Zeyada", cursive;
+}
+
+.raleway {
+  font-family: "Raleway", sans-serif;
+}
+
+header {
+  background-color: #bc7554;
+}
+.mainHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.mainHeaderText {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  color: #f9d8b7;
+}
