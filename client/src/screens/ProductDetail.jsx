@@ -1,14 +1,15 @@
 // Packages 
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-// Packages 
+// Components
+import Reviews from '../components/Reviews';
+// Services
 import { getOneProduct } from '../services/products';
 
 
 export default function ProductDetail({handleProductDelete}) {
   const [product, setProduct] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
-  const [reviews, setReviews] = useState(null);
   const { id }= useParams();
   
 
@@ -16,7 +17,6 @@ export default function ProductDetail({handleProductDelete}) {
     const fetchProduct = async () => {
       const productData = await getOneProduct(id);
       setProduct(productData);
-      setReviews(productData.reviews);
       setLoaded(true);
     }
     fetchProduct(id);
@@ -46,13 +46,14 @@ export default function ProductDetail({handleProductDelete}) {
       </div>
       <div className="reviews">
         <h3>reviews</h3>
-        {reviews.map((review, index) => (
+        <Reviews />
+        {/* {reviews.map((review, index) => (
         <div className='reviewBox' key={index}>
           <h4>{`${review.name}`}</h4>
           <p>{`${review.comment}`}</p>
           <br />
         </div>
-      ))}
+      ))} */}
       </div>
     </div>
   )
