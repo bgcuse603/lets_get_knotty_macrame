@@ -11,3 +11,20 @@
   flex-direction: column;
   gap: 30px;
 }
+
+@media screen and (max-device-width: 1000px) and (-webkit-min-device-pixel-ratio: 1) {
+  .homeDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    align-items: center;
+    padding: 0;
+  }
+  .homeIconBlock {
+    display: none;
+  }
+  img {
+    height: 50vh;
+    padding-top: 15vh;
+  }
+}
