@@ -19,13 +19,10 @@ export default function Layout({ currentUser, handleLogout, children }) {
     <div>
       <header>
         <div className='mainHeader'>
-          {location.pathname === "/" ? (
+          {location.pathname !== "/" ? (
             <div> </div>) :
-            (<div className='mainHeaderText'>
-              <h1 className='zeyada'>Lets Get Knotty...  </h1>
-              <h2 className='raleway'>MACRAMÉ</h2>
-              </div>)}
-          { currentUser ? (
+            <div className='mainHeaderText'>
+              {currentUser ? (
             <div className='signInToggle'>
               <h1>Hi, {`${currentUser.username}`}</h1>
               <button onClick={handleLogout}>Logout</button>
@@ -36,13 +33,19 @@ export default function Layout({ currentUser, handleLogout, children }) {
             ) : (
               <Link to='/signin' style={headerLinkStyle}>Sign In</Link>
           )}
+            </div>
+          }
         </div>
         <div className='subheader'>
-          {location.pathname === "/" ? (<img src={LGKlogo} height='300' />) : (<div/>)}
+          {location.pathname === "/" ? (<img src={LGKlogo} height='300vh' />) : (<div/>)}
         </div>
       </header>
       <section>
-        <Nav headerLinkStyle={headerLinkStyle}/>
+        <Nav
+          headerLinkStyle={headerLinkStyle}
+          currentUser={currentUser}
+          handleLogout={handleLogout}
+          location={location}/>
       </section>
       {children}
 
