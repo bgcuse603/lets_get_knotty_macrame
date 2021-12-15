@@ -10,9 +10,10 @@ import ProductCreate from '../screens/ProductCreate';
 // Services
 import { getAllProducts, postProduct, putProduct, deleteProduct } from '../services/products';
 
-export default function MainContainer() {
+export default function MainContainer({ currentUser }) {
   const [products, setProducts] = useState([]);
   const history = useHistory();
+  let buttonClass = '';
   
   useEffect(() => {
     const fetchProducts = async () => {
@@ -26,24 +27,37 @@ export default function MainContainer() {
     const newProduct = await postProduct(formData);
     setProducts(prevState => [...prevState, newProduct]);
     history.push('/products');
+    refreshPage();
   }
 
   const handleProductDelete = async (id) => {
     await deleteProduct(id);
     setProducts(prevState => prevState.filter(product => product.id !== id));
     history.push('/products');
+    refreshPage();
   }
 
   const handleProductUpdate = async (formData, id) => {
     const updatedProduct = await putProduct(formData, id);
     setProducts(prevState => [...prevState, updatedProduct]);
     history.push(`/products/${id}`);
+    refreshPage();
   }
 
+  const refreshPage = ()=> {
+        window.location.reload();
+  }
+
+  if (currentUser) {
+    buttonClass = 'signedIN';
+  } else {
+    buttonClass = 'signedOUT';
+  }
+  
   return (
     <div>
       <Switch>
-      <Route path='/newproduct'>
+        <Route path='/products/new'>
           <ProductCreate handleProductCreate={handleProductCreate}/>
         </Route>
         <Route path='/products/:id/update'>
@@ -52,10 +66,11 @@ export default function MainContainer() {
         </Route>
         <Route path='/products/:id'>
           <ProductDetail
-            handleProductDelete={handleProductDelete} />
+            handleProductDelete={handleProductDelete}
+            buttonClass={buttonClass}/>
         </Route>
         <Route exact path='/products'>
-          <Products products={products}/>
+          <Products products={products} buttonClass={buttonClass}/>
         </Route>
       </Switch>
     </div>

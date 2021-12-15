@@ -9,7 +9,9 @@ h2 {
   align-items: baseline;
   padding: 5vh;
   padding-top: 10vh;
-  padding-bottom: 10vh;
+  padding-bottom: 0vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
 }
 
 .productsBody {

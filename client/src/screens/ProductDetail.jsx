@@ -1,3 +1,4 @@
+import '../assets/css/ProductDetail.css';
 // Packages 
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
@@ -7,7 +8,7 @@ import Reviews from '../components/Reviews';
 import { getOneProduct } from '../services/products';
 
 
-export default function ProductDetail({handleProductDelete}) {
+export default function ProductDetail({handleProductDelete, buttonClass}) {
   const [product, setProduct] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const { id }= useParams();
@@ -38,15 +39,15 @@ export default function ProductDetail({handleProductDelete}) {
           <p>{`${product.description}`}</p>
           <div className="twoButtons">
             <Link to={`/products/${id}/update`}>
-              <button>UPDATE</button>
+              <button className={buttonClass}>UPDATE</button>
             </Link>
-            <button onClick={() => handleProductDelete(id)}>DESTROY</button>
+            <button onClick={() => handleProductDelete(id)} className={buttonClass} >DESTROY</button>
           </div>
         </div>
       </div>
       <div className="reviews">
         <h3>reviews</h3>
-        <Reviews />
+        <Reviews buttonClass={buttonClass}/>
       </div>
     </div>
   )

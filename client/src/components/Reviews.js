@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import { useParams} from 'react-router-dom';
-
+import '../assets/css/Reviews.css';
 // Services
 import { getAllReviews, postReview, deleteReview} from '../services/reviews';
 
-export default function Reviews() {
+export default function Reviews({buttonClass}) {
   const [reviews, setReviews] = useState({
     name: '',
     comment: '',
@@ -88,7 +88,7 @@ export default function Reviews() {
               <div className='reviewBox' key={index}>
               <h4>{`${review.name}`}</h4>
               <p>{`${review.comment}`}</p>
-              <button onClick={() => handleReviewDelete(review)}>DESTROY</button>
+              <button className={buttonClass} onClick={() => handleReviewDelete(review)}>DESTROY</button>
               <br />
             </div>
           ))}
