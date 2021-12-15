@@ -28,8 +28,11 @@ export default function ProductDetail({handleProductDelete, buttonClass}) {
   } 
 
   return (
-    <div>
-      <div className="productDetail">
+    <div className="productDetail">
+      <div className='productsDetailTitle'>
+        <h1>Product Detail</h1>
+      </div>
+      <div className="productDetailMain">
         <div className="imgBox">
           <img src={`${product.img}`} alt="macrame" width="400vw" height="400vh"></img>
         </div>

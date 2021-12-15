@@ -1,17 +1,21 @@
-.productDetail {
+.productsDetailTitle {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 10vh;
+  padding-left: 10vh;
+}
+.productDetailMain {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 10vh;
-  width: 100%;
+  gap: 5vw;
 }
 
 .textBox {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   align-items: center;
-  padding-left: 10vw;
   gap: 5vh;
 }
 
@@ -34,8 +38,13 @@ p {
   width: 80%;
 }
 @media screen and (max-device-width: 1000px) and (-webkit-min-device-pixel-ratio: 1) {
-  .productDetail {
+  .productDetailMain {
     flex-direction: column;
+    padding: 0;
+  }
+  .productsDetailTitle {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
   }
   .textBox {
     display: flex;
@@ -48,7 +57,9 @@ p {
 
   img {
     align-self: center;
-    width: 100%;
+    width: 96%;
+    padding: 0;
+    border-radius: 8px;
   }
 
   button.signedIN {
