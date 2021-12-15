@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import '../assets/css/SignIn.css';
 
 export default function SignIn(props) {
   const [formData, setFormData] = useState({
@@ -17,31 +18,41 @@ export default function SignIn(props) {
     }))
   }
 
+  const formtextbox = {
+    color: "#F9D8B7",
+
+    fontFamily: "Raleway",
+    fontSize: "20px",
+    margin: "5px",
+
+  }
   return (
-    <form onSubmit={(e) => {
+    <form className='signInForm' onSubmit={(e) => {
       e.preventDefault();
       handleLogin(formData);
     }}>
-      <h3>Sign In</h3>
-      <label> Username:
+      <h1>Sign In</h1>
+      <label>
         <input
           type='text'
           name='username'
           value={username}
+          placeholder='Username'
+          style={formtextbox}
           onChange={handleChange}
         />
       </label>
-      <br />
-      <label> Password:
+      <label> 
         <input
           type='password'
           name='password'
           value={password}
+          placeholder='Password'
+          style={formtextbox}
           onChange={handleChange}
         />
       </label>
-      <br />
-      <button>Sign In</button>
+      <button className='signInScreenButton'>Sign In</button>
       <Link to='/home'></Link>
     </form>
   )
