@@ -43,6 +43,9 @@ p {
   .aboutTitle {
     padding-top: 5vh;
     padding-bottom: 5vh;
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
   }
   .textBox {
     display: flex;
@@ -57,7 +60,7 @@ p {
   img {
     align-self: center;
     width: 96%;
-    padding: 0;
+    padding: 5vh;
     border-radius: 8px;
   }
 }

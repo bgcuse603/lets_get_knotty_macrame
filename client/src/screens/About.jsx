@@ -17,7 +17,7 @@ export default function About() {
         <div className="textBox">
           <h1>Lets Get Knotty MACRAMÉ</h1>
           <p>
-            A New Hampshire based small business, owned and operated by Courtney Irzyk.
+            A New Hampshire based small business. Owned and operated by Courtney Irzyk.
           </p>
         </div>
       </div>
