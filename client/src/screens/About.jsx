@@ -1,6 +1,6 @@
 import '../assets/css/About.css';
 import courtneyI from '../assets/images/courtneyI.jpg';
-import iconWallHanger from '../assets/images/iconWallHanger.png';
+
 
 export default function About() {
   return (

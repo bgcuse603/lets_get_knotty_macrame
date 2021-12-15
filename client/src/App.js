@@ -4,6 +4,7 @@ import { Switch, Route, useHistory } from 'react-router-dom';
 import Layout from './layouts/Layout';
 import Home from './screens/Home';
 import About from './screens/About';
+import Contact from './screens/Contact';
 import SignIn from './screens/SignIn';
 import Register from './screens/Register';
 import MainContainer from './containers/MainContainer'
@@ -44,7 +45,7 @@ function App() {
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
         <Route path='/contact'>
-            <h1>CONTACT</h1>
+            <Contact />
           </Route>
           <Route path='/about'>
             <About />
