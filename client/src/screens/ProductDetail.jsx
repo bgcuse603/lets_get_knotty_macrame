@@ -31,11 +31,11 @@ export default function ProductDetail({handleProductDelete, buttonClass}) {
     <div>
       <div className="productDetail">
         <div className="imgBox">
-          <img src={`${product.img}`} alt="macrame" width="500" height="600"></img>
+          <img src={`${product.img}`} alt="macrame" width="400vw" height="400vh"></img>
         </div>
         <div className="textBox">
-          <h4>{`${product.item}`}</h4>
-          <h6>{`${product.price}`}</h6>
+          <h1>Item {`${product.item}`}</h1>
+          <h2>${`${product.price}`}</h2>
           <p>{`${product.description}`}</p>
           <div className="twoButtons">
             <Link to={`/products/${id}/update`}>

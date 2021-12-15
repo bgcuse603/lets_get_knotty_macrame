@@ -1,0 +1,64 @@
+.productDetail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10vh;
+  width: 100%;
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 10vw;
+  gap: 5vh;
+}
+
+.twoButtons {
+  display: flex;
+  gap: 10vw;
+}
+
+h1 {
+  font-size: 30px;
+  margin: 0;
+}
+h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+p {
+  font-size: 17px;
+  width: 80%;
+}
+@media screen and (max-device-width: 1000px) and (-webkit-min-device-pixel-ratio: 1) {
+  .productDetail {
+    flex-direction: column;
+  }
+  .textBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 3vh;
+    padding-left: 0;
+    gap: 2vh;
+  }
+
+  img {
+    align-self: center;
+    width: 100%;
+  }
+
+  button.signedIN {
+    width: 125px;
+    padding: 2vh;
+    font-size: 3vh;
+    align-self: center;
+  }
+
+  .twoButtons {
+    gap: 5vw;
+  }
+}
