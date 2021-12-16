@@ -1,4 +1,4 @@
-.nav {
+.navFULL {
   background-color: #bc7554;
   display: flex;
   justify-content: space-evenly;
@@ -8,9 +8,43 @@
   margin: 0;
 }
 
+.navMENU {
+  display: none;
+}
+
+img.navicon {
+  background-color: #bc7554;
+  padding-top: 2vh;
+  height: 3vh;
+  width: 3vh;
+}
+
+div.navicon {
+  display: none;
+}
+
+.menuShow {
+  display: none;
+}
+.menuHidden {
+  display: none;
+}
 @media screen and (max-device-width: 1000px) and (-webkit-min-device-pixel-ratio: 1) {
-  .nav {
+  div.navicon {
+    display: block;
+    background-color: #bc7554;
+  }
+  .navFULL {
+    display: none;
+  }
+  .menuShow {
+    background-color: #bc7554;
+    display: inline;
+    display: flex;
+    gap: 1vh;
     flex-direction: column;
-    border-top-style: none;
+  }
+  .menuHidden {
+    display: none;
   }
 }

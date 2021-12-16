@@ -121,6 +121,7 @@ src
 - _Search Bar_
 - _Mobile nav bar_
 - _Add footer_
+- _Edge cases_
 
 ## Code Showcase
 
