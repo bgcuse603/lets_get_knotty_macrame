@@ -72,28 +72,28 @@ src
 
 #### Time Estimates
 
-| Task                       | Priority | Estimated Time | Time Invested | Actual Time |
-| -------------------------- | :------: | :------------: | :-----------: | :---------: |
-| README & planning          |    H     |     3 hrs      |     8 hrs     |     TBD     |
-| Backend Auth               |    H     |     3 hrs      |     1 hr      |     TBD     |
-| Backend Database           |    H     |     3 hrs      |     1 hr      |     TBD     |
-| Seed & Create data         |    H     |     3 hrs      |     2 hrs     |     TBD     |
-| Test backend routes        |    H     |     3 hrs      |     2 hrs     |     TBD     |
-| Frontend Auth              |    H     |     3 hrs      |     1 hr      |     TBD     |
-| Frontend routes & test     |    H     |     3 hrs      |     3 hrs     |     TBD     |
-| Get, Edit, Delete products |    H     |     3 hrs      |      TBD      |     TBD     |
-| Get, Delete reviews        |    H     |     3 hrs      |      TBD      |     TBD     |
-| Layout setup               |    H     |     3 hrs      |      TBD      |     TBD     |
-| Navigation                 |    H     |     3 hrs      |      TBD      |     TBD     |
-| Footer                     |    H     |     3 hrs      |      TBD      |     TBD     |
-| Home screen                |    H     |     3 hrs      |      TBD      |     TBD     |
-| Product screen             |    H     |     3 hrs      |      TBD      |     TBD     |
-| Product detail screen      |    H     |     3 hrs      |      TBD      |     TBD     |
-| Product update screen      |    H     |     3 hrs      |      TBD      |     TBD     |
-| About screen               |    H     |     3 hrs      |      TBD      |     TBD     |
-| Contact screen             |    H     |     3 hrs      |      TBD      |     TBD     |
-| Sign In screen             |    H     |     3 hrs      |      TBD      |     TBD     |
-| TOTAL                      |          |     62 hrs     |      TBD      |     TBD     |
+| Task                       | Priority | Estimated Time | Time Invested |
+| -------------------------- | :------: | :------------: | :-----------: |
+| README & planning          |    H     |     3 hrs      |     8 hrs     |
+| Backend Auth               |    H     |     3 hrs      |     1 hr      |
+| Backend Database           |    H     |     3 hrs      |     1 hr      |
+| Seed & Create data         |    H     |     3 hrs      |     2 hrs     |
+| Test backend routes        |    H     |     3 hrs      |     2 hrs     |
+| Frontend Auth              |    H     |     3 hrs      |     1 hr      |
+| Frontend routes & test     |    H     |     3 hrs      |     3 hrs     |
+| Get, Edit, Delete products |    H     |     3 hrs      |     3 hrs     |
+| Get, Delete reviews        |    H     |     3 hrs      |     3 hrs     |
+| Layout setup               |    H     |     3 hrs      |     3 hrs     |
+| Navigation                 |    H     |     3 hrs      |      TBD      |
+| Footer                     |    H     |     3 hrs      |      TBD      |
+| Home screen                |    H     |     3 hrs      |     3 hrs     |
+| Product screen             |    H     |     3 hrs      |     3 hrs     |
+| Product detail screen      |    H     |     3 hrs      |     3 hrs     |
+| Product update screen      |    H     |     3 hrs      |     3 hrs     |
+| About screen               |    H     |     3 hrs      |     1 hr      |
+| Contact screen             |    H     |     3 hrs      |     1 hr      |
+| Sign In screen             |    H     |     3 hrs      |     2 hrs     |
+| TOTAL                      |          |     62 hrs     |      TBD      |
 
 <br>
 
@@ -117,6 +117,8 @@ src
 
 - _Add contact form that sends emails to owner_
 - _Form to add custom order and send to owner_
+- _Search Bar_
+- _Mobile nav bar_
 
 ## Code Showcase
 
