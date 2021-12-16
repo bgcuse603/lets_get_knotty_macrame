@@ -1,0 +1,57 @@
+button.reviewSubmit {
+  width: auto;
+  font-size: 3vh;
+  align-self: center;
+}
+
+.reviewForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 10vh;
+  gap: 3vh;
+}
+
+.reviewBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-style: solid;
+  width: 75%;
+  background-color: #fdfcf7;
+  margin: 0;
+}
+
+.reviewDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+
+.reviewList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3vh;
+}
+
+h4 {
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px;
+}
+
+p {
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px;
+}
+@media screen and (max-device-width: 1000px) and (-webkit-min-device-pixel-ratio: 1) {
+  button.reviewSubmit {
+    width: 125px;
+    padding: 2vh;
+    font-size: 3vh;
+    align-self: center;
+  }
+}

@@ -49,7 +49,6 @@ export default function ProductDetail({handleProductDelete, buttonClass}) {
         </div>
       </div>
       <div className="reviews">
-        <h3>reviews</h3>
         <Reviews buttonClass={buttonClass}/>
       </div>
     </div>

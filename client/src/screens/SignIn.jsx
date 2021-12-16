@@ -20,12 +20,11 @@ export default function SignIn(props) {
 
   const formtextbox = {
     color: "#F9D8B7",
-
     fontFamily: "Raleway",
     fontSize: "20px",
     margin: "5px",
-
   }
+  
   return (
     <form className='signInForm' onSubmit={(e) => {
       e.preventDefault();

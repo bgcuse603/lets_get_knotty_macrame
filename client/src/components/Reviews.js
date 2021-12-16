@@ -40,10 +40,26 @@ export default function Reviews({buttonClass}) {
     }))
   }
 
+  const formtextboxA = {
+    color: "#323D33",
+    fontFamily: "Raleway",
+    fontSize: "20px",
+    margin: "5px",
+    width: "75%",
+  }
+
+  const formtextboxB = {
+    color: "#323D33",
+    fontFamily: "Raleway",
+    fontSize: "20px",
+    margin: "5px",
+    width: "75%",
+    height: "60px",
+  }
+
   const handleReviewCreate = async (id, formData) => {
     const newReview = await postReview(id, formData);
     setReviews(prevState => [...prevState, newReview]);
-    // setToggleFetch(!toggleFetch);
   }
 
   const handleReviewDelete = async (review) => {
@@ -51,39 +67,41 @@ export default function Reviews({buttonClass}) {
     let productId = review.product_id;
     await deleteReview(productId, reviewId);
     setReviews(prevState => prevState.filter(review => review.id !== reviewId));
-    // setToggleFetch(!toggleFetch);
   }
 
   return (
-    <div>
-      <form
+    <div className='reviewDiv'>
+      <form className='reviewForm'
         onSubmit={(e) => {
           e.preventDefault();
           handleReviewCreate(id, formData);
         }}>
+      <h1>Reviews</h1>
       <label>
-        Name:
         <input
           type='text'
           name='name'
           value={name}
+          placeholder='Your Name'
+          style={formtextboxA}
           onChange={handleChange}
         />
-        </label><br />
+        </label>
         <label>
-        Comment:
         <input
           type='text'
           name='comment'
           value={comment}
+          placeholder='Your Review'
+          style={formtextboxB}
           onChange={handleChange}
         />
-        </label><br />
-        <button>Submit</button><br/>
+        </label>
+        <button className='reviewSubmit'>Submit</button><br/>
       </form>
       <div>
         {toggleFetch ?
-          <div>
+          <div className="reviewList">
             {reviews.map((review, index) => (
               <div className='reviewBox' key={index}>
               <h4>{`${review.name}`}</h4>
