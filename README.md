@@ -88,7 +88,7 @@ src
 | Get, Edit, Delete products |    H     |     3 hrs      |     3 hrs     |
 | Get, Delete reviews        |    H     |     3 hrs      |     3 hrs     |
 | Layout setup               |    H     |     3 hrs      |     3 hrs     |
-| Navigation                 |    H     |     3 hrs      |      TBD      |
+| Navigation                 |    H     |     3 hrs      |     5 hrs     |
 | Home screen                |    H     |     3 hrs      |     3 hrs     |
 | Product screen             |    H     |     3 hrs      |     3 hrs     |
 | Product detail screen      |    H     |     3 hrs      |     3 hrs     |
@@ -96,7 +96,7 @@ src
 | About screen               |    H     |     3 hrs      |     1 hr      |
 | Contact screen             |    H     |     3 hrs      |     1 hr      |
 | Sign In screen             |    H     |     3 hrs      |     2 hrs     |
-| TOTAL                      |          |     62 hrs     |    44 hrs     |
+| TOTAL                      |          |     62 hrs     |    49 hrs     |
 
 ### Server (Back End)
 
