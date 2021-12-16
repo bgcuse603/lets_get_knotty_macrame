@@ -125,8 +125,28 @@ src
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+```
+      <div>
+        {toggleFetch ?
+          <div className="reviewList">
+            {reviews.map((review, index) => (
+              <div className='reviewBox' key={index}>
+              <h4>{`${review.name}`}</h4>
+              <p>{`${review.comment}`}</p>
+              <button className={buttonClass} onClick={() => handleReviewDelete(review)}>DESTROY</button>
+              <br />
+            </div>
+          ))}
+          </div> : '...loading reviews...'}
+      </div>
+```
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+### Issue
+
+One item for reasons unknown to me at this time can not be deleted. The function of delete works for other items but not this one.
+
+### Resolution
+
+That item is marked as sold out. Keeping it on the site to advertise a best seller.
