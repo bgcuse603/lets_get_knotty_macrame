@@ -4,6 +4,10 @@
 
 **Lets Get Knotty Macramé** is a full stack app designed as an inventory for a small macramé businessy located in Manchester, New Hampshire.
 
+### Deployment Site
+
+https://letsgetknottymacrame.netlify.app/
+
 ## MVP
 
 _The **Lets Get Knotty Macramé** MVP will allow all users to explore product inventory_
