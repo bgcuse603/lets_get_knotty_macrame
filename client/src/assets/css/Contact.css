@@ -41,6 +41,7 @@ h4 {
   width: 80%;
   color: #323d33;
 }
+
 @media screen and (max-device-width: 1000px) and (-webkit-min-device-pixel-ratio: 1) {
   .contactMain {
     flex-direction: column;
@@ -67,7 +68,46 @@ h4 {
     align-self: center;
     height: 40vh;
     width: 30vh;
-    /* padding: 5vh;
-    border-radius: 8px; */
+  }
+}
+
+@media screen and (min-device-width: 1001px) and (max-device-width: 1200px) {
+  .contactMain {
+    flex-direction: column;
+    padding: 0;
+    background-color: #c59b7e;
+  }
+  .contactTitle {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+    background-color: #c59b7e;
+  }
+  .textBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 3vh;
+    padding-left: 0;
+    gap: 2vh;
+    padding-bottom: 5vh;
+    background-color: #c59b7e;
+  }
+
+  img {
+    align-self: center;
+    height: 40vh;
+    width: 30vh;
+    background-color: #c59b7e;
+  }
+  h4 {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    padding-left: 30vw;
+    align-items: center;
   }
 }
