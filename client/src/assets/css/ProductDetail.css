@@ -7,7 +7,7 @@
 .productDetailMain {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 10vh;
   gap: 5vw;
 }
