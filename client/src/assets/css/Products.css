@@ -24,3 +24,21 @@ h2 {
   padding-top: 10vh;
   padding-bottom: 10vh;
 }
+
+@media screen and (max-device-width: 1000px) and (-webkit-min-device-pixel-ratio: 1) {
+  .productsBody {
+    padding: 0;
+    margin: 0;
+  }
+
+  img {
+    align-self: center;
+    width: 300px;
+    padding: 5vh;
+    border-radius: 8px;
+  }
+  .imgBox {
+    padding: 0;
+    margin: 0;
+  }
+}
