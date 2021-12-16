@@ -59,8 +59,11 @@ p {
 
   img {
     align-self: center;
-    width: 96%;
+    width: 75%;
     padding: 5vh;
     border-radius: 8px;
+  }
+  .imgBox {
+    padding: 2vh;
   }
 }
