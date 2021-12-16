@@ -1,0 +1,15 @@
+.updateForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10vh;
+  gap: 3vh;
+}
+
+button.updateScreenButton {
+  width: 125px;
+  padding: 1vh;
+  font-size: 23px;
+  align-self: center;
+}

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import '../assets/css/ProductUpdate.css';
 // Services
 import { getOneProduct } from '../services/products';
 
@@ -42,61 +43,74 @@ export default function ProductUpdate({ handleProductUpdate }) {
     }))
   }
 
+  const formtextbox = {
+    color: "#F9D8B7",
+    fontFamily: "Raleway",
+    fontSize: "20px",
+    margin: "5px",
+  }
+
   return (
     <form
+    className='createForm'
       onSubmit={(e) => {
         e.preventDefault();
         handleProductUpdate(formData, id);
       }}
     >
-      <h2>Product Update</h2>
+      <h1>Product Update</h1>
       <label>
-        Item:
         <input
           type='text'
           name='item'
           value={item}
+          placeholder='Item'
+          style={formtextbox}
           onChange={handleChange}
         />
-      </label><br/>
+      </label>
       <label>
-        Price:
         <input
           type='integer'
           name='price'
           value={price}
+          placeholder='Price'
+          style={formtextbox}
           onChange={handleChange}
         />
-      </label><br/>
+      </label>
       <label>
-        Description:
         <input
           type='text'
           name='description'
           value={description}
+          placeholder='Description'
+          style={formtextbox}
           onChange={handleChange}
         />
-      </label><br />
+      </label>
       <label>
-        Image URL:
         <input
           type='text'
           name='img'
           value={img}
+          placeholder='Image URL'
+          style={formtextbox}
           onChange={handleChange}
         />
-      </label><br />
+      </label>
       <label>
-        Category: 
         <input
           type='text'
           name='hanger'
           value={hanger}
+          placeholder='Category'
+          style={formtextbox}
           onChange={handleChange}
         />
-      </label><br/>
+      </label>
 
-      <button>Submit</button>
+      <button className='updateScreenButton'>Submit</button>
     </form>
   )
 }

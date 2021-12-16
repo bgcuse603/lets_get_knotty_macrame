@@ -89,7 +89,6 @@ src
 | Get, Delete reviews        |    H     |     3 hrs      |     3 hrs     |
 | Layout setup               |    H     |     3 hrs      |     3 hrs     |
 | Navigation                 |    H     |     3 hrs      |      TBD      |
-| Footer                     |    H     |     3 hrs      |      TBD      |
 | Home screen                |    H     |     3 hrs      |     3 hrs     |
 | Product screen             |    H     |     3 hrs      |     3 hrs     |
 | Product detail screen      |    H     |     3 hrs      |     3 hrs     |
@@ -97,9 +96,7 @@ src
 | About screen               |    H     |     3 hrs      |     1 hr      |
 | Contact screen             |    H     |     3 hrs      |     1 hr      |
 | Sign In screen             |    H     |     3 hrs      |     2 hrs     |
-| TOTAL                      |          |     62 hrs     |      TBD      |
-
-<br>
+| TOTAL                      |          |     62 hrs     |    44 hrs     |
 
 ### Server (Back End)
 
@@ -123,6 +120,7 @@ src
 - _Form to add custom order and send to owner_
 - _Search Bar_
 - _Mobile nav bar_
+- _Add footer_
 
 ## Code Showcase
 
